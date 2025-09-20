@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Husnain ALi — Portfolio</title>
+  <meta name="description" content="Portfolio / Resume — Your Name" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#hero">Husnain Ali</a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <img src="assets/avatar.png" alt="Husnain Ali" class="avatar" />
+        <div>
+          <h1>Hi, I’m <span class="accent">Husnain Ali</span></h1>
+          <p class="lead">Frontend developer & UI tinkerer. I build simple, accessible web apps that make people smile.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">See my work</a>
+            <a class="btn btn-outline" href="assets/Husnain-Ali-Resume.pdf" download>Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>Short summary about you. Mention role, years of experience, focus areas, and what you enjoy building.</p>
+      <ul class="meta">
+        <li><strong>Location:</strong> City, Country</li>
+        <li><strong>Email:</strong> <a id="mailto" href="mailto:you@example.com">you@example.com</a></li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <p class="muted">A few projects — click to view details.</p>
+
+      <div class="projects-grid">
+        <article class="project-card" tabindex="0" data-title="Project One" data-desc="Short description of project one. Tools: HTML, CSS, JS." data-image="assets/project-1.jpg" data-live="https://example.com">
+          <img src="assets/project-1.jpg" alt="Project One screenshot" class="project-thumb">
+          <div class="project-info">
+            <h3>Project One</h3>
+            <p class="muted">HTML • CSS • JS</p>
+          </div>
+        </article>
+
+        <article class="project-card" tabindex="0" data-title="Project Two" data-desc="Short description of project two. Tools: React, APIs." data-image="assets/project-2.jpg" data-live="">
+          <img src="assets/project-2.jpg" alt="Project Two screenshot" class="project-thumb">
+          <div class="project-info">
+            <h3>Project Two</h3>
+            <p class="muted">React • API</p>
+          </div>
+        </article>
+
+        <!-- add more cards as needed -->
+      </div>
+    </section>
+
+    <!-- PROJECT MODAL -->
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content" role="document">
+        <button class="modal-close" id="modal-close" aria-label="Close dialog">✕</button>
+        <img id="modal-image" src="" alt="" class="modal-image" />
+        <div class="modal-body">
+          <h3 id="modal-title"></h3>
+          <p id="modal-desc"></p>
+          <a id="modal-live" class="btn" target="_blank" rel="noopener">View live</a>
+        </div>
+      </div>
+      <div class="modal-backdrop" tabindex="-1" data-dismiss></div>
+    </div>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">UX</div>
+        <div class="skill">Accessibility</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>If you'd like to work together, send me a message.</p>
+
+      <form id="contact-form" class="contact-form" method="POST" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Send message</button>
+          <button class="btn btn-outline" id="copy-email" type="button">Copy email</button>
+        </div>
+
+        <div id="form-status" aria-live="polite" class="form-status"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Your Name — Built with HTML, CSS & JS</small>
+    <div class="socials">
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
